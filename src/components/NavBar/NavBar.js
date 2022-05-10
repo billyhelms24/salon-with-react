@@ -3,6 +3,7 @@ import NavItem from "./NavItem";
 
 const NavBar = () => {
   const [navbarIsActive, setNavbarIsActive] = useState(false);
+  const [activeTab, setActiveTab] = useState("");
 
   return (
     <nav
@@ -46,13 +47,13 @@ const NavBar = () => {
         className={`navbar-menu ${navbarIsActive ? "is-active" : ""}`}
       >
         <div className="navbar-start">
-          <NavItem pageName="staff" />
+          <NavItem pageName="staff" setActiveTab={setActiveTab} />
 
-          <NavItem pageName="services" />
+          <NavItem pageName="services" setActiveTab={setActiveTab} />
 
-          <NavItem pageName="about" />
+          <NavItem pageName="about" setActiveTab={setActiveTab} />
 
-          <NavItem pageName="gift cards" />
+          <NavItem pageName="gift cards" setActiveTab={setActiveTab} />
         </div>
 
         <div className="navbar-end is-uppercase">

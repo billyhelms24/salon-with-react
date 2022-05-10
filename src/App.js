@@ -1,5 +1,4 @@
-import "bulma/css/bulma.min.css";
-import "./App.css";
+import "./css/App.css";
 import FootBar from "./components/FootBar/FootBar";
 import NavBar from "./components/NavBar/NavBar";
 

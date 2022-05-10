@@ -5,6 +5,7 @@ const NavItem = (props) => {
       href=" "
       onClick={(event) => {
         event.preventDefault();
+        props.setActiveTab(props.pageName);
       }}
     >
       {props.pageName}
