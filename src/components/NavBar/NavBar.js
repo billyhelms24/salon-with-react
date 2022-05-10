@@ -2,7 +2,8 @@ import { useState } from "react";
 import NavItem from "./NavItem";
 
 const NavBar = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [navbarIsActive, setNavbarIsActive] = useState(false);
+
   return (
     <nav
       className="navbar has-text-centered"
@@ -10,19 +11,29 @@ const NavBar = () => {
       aria-label="main navigation"
     >
       <div className="navbar-brand">
-        <a className="navbar-item is-tab is-active">
+        <a
+          className="navbar-item is-tab is-active"
+          href=" "
+          onClick={(event) => {
+            event.preventDefault();
+          }}
+        >
           <img src={require("../../img/logo.png")} alt="logo" />
         </a>
 
         <a
-          onClick={() => {
-            setIsActive(!isActive);
+          onClick={(event) => {
+            event.preventDefault();
+            setNavbarIsActive(!navbarIsActive);
           }}
           role="button"
-          className={`navbar-burger burger ${isActive ? "is-active" : ""}`}
+          className={`navbar-burger burger ${
+            navbarIsActive ? "is-active" : ""
+          }`}
           aria-label="menu"
           aria-expanded="false"
           data-target="navMenu"
+          href=" "
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -32,7 +43,7 @@ const NavBar = () => {
 
       <div
         id="navMenu"
-        className={`navbar-menu ${isActive ? "is-active" : ""}`}
+        className={`navbar-menu ${navbarIsActive ? "is-active" : ""}`}
       >
         <div className="navbar-start">
           <NavItem pageName="staff" />
