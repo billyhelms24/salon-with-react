@@ -1,0 +1,21 @@
+body {
+    letter-spacing: 0.15rem;
+}
+
+.navbar {
+    box-shadow: none;
+    min-height: 3.25rem !important;
+}
+
+.navbar-burger {
+    height: 64px !important;
+    width: 64px !important;
+}
+
+.navbar-item img {
+    max-height: 3rem;
+}
+
+html {
+    font-size: 18px !important;
+}
