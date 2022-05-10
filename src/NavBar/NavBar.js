@@ -11,7 +11,7 @@ const NavBar = () => {
     >
       <div className="navbar-brand">
         <a className="navbar-item is-tab is-active">
-          <img src={require("./img/logo.png")} alt="logo" />
+          <img src={require("../img/logo.png")} alt="logo" />
         </a>
 
         <a
